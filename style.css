@@ -11,10 +11,6 @@ li {
   display: inline-block;
 }
 
-li a {
-  padding: 10px 10px;
-}
-
 .flex-container {
   display: flex;
 }
@@ -28,7 +24,7 @@ li a {
 .headline-paragraphs {
   font-family: 'Inter', sans-serif;
   text-align: center;
-  width: 327px;
+  max-width: 70%;
   text-decoration: none;
   -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -40,10 +36,48 @@ li a {
   background-repeat: no-repeat;
   max-width: 100%;
   max-height: 100vh;
-  padding-top: 106px;
   height: 100vh;
+}
+
+.flex-headline {
+  justify-content: center;
   align-items: center;
-  flex-flow: column;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+nav ul li {
+  padding: 11px;
+  align-content: center;
+}
+
+nav ul li a 
+{
+  width: 20px;
+  height: 20px;
+}
+
+nav ul li a:hover {
+  background-color: transparent;
+  color: white;
+}
+
+div aside {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
 }
 
 .bttn {
@@ -53,28 +87,22 @@ li a {
   border: 1px solid gray;
   border-radius: 60px;
   color: white;
-  padding: 15px 21px;
+  padding: 15px 19px;
+  margin-top: 40px;
   text-decoration: none;
-  margin: 120px 2px;
   cursor: pointer;
 }
 
-a:hover {
+aside a:hover {
   background-color: #36b37f;
 }
 
-a:active {
+aside a:active {
   background-color: #008552;
 }
 
-.nav {
-  flex-direction: row;
-  justify-content: center;
-  display: flex;
-}
-
 #bttn-img {
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 #header-welcome-link {
@@ -86,8 +114,8 @@ a:active {
   color: #28352f;
 }
 
-#p1 {
-  margin-top: -70px;
+h1 {
+  padding-top: 50px;
   color: #172b4d;
   font-size: 40px;
   font-weight: bolder;

@@ -11,8 +11,9 @@ Built With
 [Live Demo](https://mateo951.github.io/portfolio/)
 
 To get a local copy up and running follow these simple example steps.
-- On your terminal write the following command to clone the repository
-    - git clone git@github.com:mateo951/portfolio.git
+- On your terminal and run the following command to clone the repository
+  
+  `git clone git@github.com:mateo951/portfolio.git`
 
 Authors
 👤 Mateo Villagómez
@@ -31,5 +32,3 @@ Give a ⭐️ if you like this project!
 
 📝 License
 This project is MIT licensed.
-=======
-# portfolio
