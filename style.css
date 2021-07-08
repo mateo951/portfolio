@@ -47,8 +47,9 @@ li a {
 }
 
 .button1 { 
-  background-image: url("images/buttons/disabled.png");
   background-repeat: no-repeat;
+  background-image: url("images/buttons/disabled.png");
+  background-color: transparent;
   border-style: none;
   display: flex;
   padding: 12px 21px; 
