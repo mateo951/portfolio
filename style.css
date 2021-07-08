@@ -46,15 +46,13 @@ li a {
   flex-flow: column;
 }
 
-.button1 { 
-  background-repeat: no-repeat;
-  background-image: url("images/buttons/disabled.png");
-  background-color: transparent;
+.btt {
+  margin-top: 40px;
+  padding: 12px 21px;
   border-style: none;
-  display: flex;
-  padding: 12px 21px; 
-  justify-content: center;
-  margin-top: 40px; 
+  background-image: url("images/buttons/disabled.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 .nav {
@@ -64,12 +62,12 @@ li a {
 }
 
 #header-welcome-link {
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-size: 20px;
   font-weight: 900;
-  color: #28352f;
-  text-decoration: none; 
+  text-decoration: none;
   width: 90px;
+  color: #28352f;
 }
 
 #p1 {
