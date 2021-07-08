@@ -6,13 +6,36 @@ body {
   margin:0;
 }
 
+ul li 
+{
+  list-style: none;
+  float:none; 
+  display:inline-block;
+}
+
+li a {
+ padding: 10px 10px;
+
+}
+
 .flex-container {
-  position: relative;
-  border: 1px solid #000000;
   display: flex;
+}
+
+.header-items 
+{
   align-items: center;
   justify-content: space-between;
   padding: 30px 30px;
+}
+
+.headline-paragraphs {
+  font-family: Inter;
+  text-align: center;
+  width: 327px;
+  text-decoration: none;
+  /* Text appearing blurry, fix apply */ 
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .bg-img {
@@ -24,25 +47,60 @@ body {
   background-repeat: no-repeat;
   max-width: 100%;
   max-height: 100vh;
-  padding-top: 60px;
+  padding-top: 136px;
+  height: 100vh;
+  align-items: center;
+  flex-flow: column;
 }
 
-#flex-container-headline 
-{
-  height: 100vh;
-  flex-direction: column;
-  align-content: center;
-  justify-content: flex-start;
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button-1 
+{ 
+  display: flex;
+  background-color: transparent; 
+  padding: 12px 21px; 
+  justify-content: center;
+  margin-top: 100px; 
+  background-repeat: no-repeat;
+  border-style: none;
 }
 
 #header-welcome-link {
   font-family: Inter;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 900;
   color: #28352F;
   width: 90px;
   text-decoration: none;
   /* Text appearing blurry, fix apply */ 
   -webkit-font-smoothing: subpixel-antialiased;
 }
+
+#p1 {
+  margin-top: -70px;
+  color: #172B4D;
+  font-size: 40px;
+  font-weight: bolder;
+  line-height: 52px;
+}
+
+#p2 {
+  color: #172B4D;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 28px;
+}
+#p3 
+{
+  color: #36B37F;
+  font-size: 40px;
+  font-weight: bolder;
+  line-height: 52px;
+}
+
 
