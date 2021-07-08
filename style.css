@@ -1,29 +1,26 @@
 body {
-  background-color: #FFFFFF;
+  background-color: #fff;
   width: 100%;
   height: 100%;  
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 
-ul li 
-{
+ul li {
   list-style: none;
   float:none; 
   display:inline-block;
 }
 
 li a {
- padding: 10px 10px;
-
+  padding: 10px 10px;
 }
 
 .flex-container {
   display: flex;
 }
 
-.header-items 
-{
+.header-items {
   align-items: center;
   justify-content: space-between;
   padding: 30px 30px;
@@ -34,13 +31,10 @@ li a {
   text-align: center;
   width: 327px;
   text-decoration: none;
-  /* Text appearing blurry, fix apply */ 
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .bg-img {
-  /* Using css background-image property 
-  becuase its not part of the design */
   background-image: url("images/header-illsutration-mobile.svg");
   background-size: cover;
   background-position: center;
@@ -59,8 +53,8 @@ li a {
   justify-content: center;
 }
 
-.button-1 
-{ 
+.button-1 { 
+  background-image:url('images/buttons/disabled.png');
   display: flex;
   background-color: transparent; 
   padding: 12px 21px; 
@@ -74,31 +68,28 @@ li a {
   font-family: Inter;
   font-size: 20px;
   font-weight: 900;
-  color: #28352F;
+  color: #28352f;
+  text-decoration: none; 
   width: 90px;
-  text-decoration: none;
-  /* Text appearing blurry, fix apply */ 
-  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 #p1 {
   margin-top: -70px;
-  color: #172B4D;
+  color: #172b4d;
   font-size: 40px;
   font-weight: bolder;
   line-height: 52px;
 }
 
 #p2 {
-  color: #172B4D;
+  color: #172b4d;
   font-size: 20px;
   font-weight: normal;
   line-height: 28px;
 }
 
-#p3 
-{
-  color: #36B37F;
+#p3 {
+  color: #36b37f;
   font-size: 40px;
   font-weight: bolder;
   line-height: 52px;
