@@ -2,7 +2,7 @@ Portfolio
 
 The project's goal is to clone a design from a portfolio with html and css. Applying new tools such us Flexbox, Figma, and as well as using best practices for html and css. This project is the start of a micronaut future portfolio!
 
-![Alt text](/projectSS.png?raw=true)
+![Alt text](/images/screenshot_1.png?raw=true)
 
 Built With
 - HTML, CSS, JS
