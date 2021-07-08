@@ -40,25 +40,40 @@ li a {
   background-repeat: no-repeat;
   max-width: 100%;
   max-height: 100vh;
-  padding-top: 136px;
+  padding-top: 106px;
   height: 100vh;
   align-items: center;
   flex-flow: column;
 }
 
-.btt {
-  margin-top: 40px;
-  padding: 12px 21px;
-  border-style: none;
-  background-image: url("images/buttons/disabled.png");
-  background-repeat: no-repeat;
-  background-color: transparent;
+.bttn {
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 60px;
+  color: white;
+  padding: 15px 21px;
+  text-decoration: none;
+  margin: 120px 2px;
+  cursor: pointer;
+}
+a:hover {
+  background-color: #36b37f;
+}
+
+a:active {
+  background-color: #008552;
 }
 
 .nav {
   flex-direction: row;
   justify-content: center;
   display: flex;
+}
+
+#bttn-img {
+  margin-bottom: 4px;
 }
 
 #header-welcome-link {
