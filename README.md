@@ -1,26 +1,19 @@
-<!-- Project's name -->
-Template Repository!
+Portfolio
 
-<!-- Project's description -->
-The project is a template with all set to start development.
+The project's goal is to clone a design from a portfolio with html and css. Applying new tools such us Flexbox, Figma, and as well as using best practices for html and css. This project is the start of a micronaut future portfolio!
 
-<!-- Project's Screenshot -->
 ![Alt text](/projectSS.png?raw=true)
 
-<!-- Project's technology -->
 Built With
 - HTML, CSS, JS
-- Linters, Node.js, Git
+- Linters, Node.js, Git, Flexbox
 
-<!-- Project's technology -->
-[Live Demo](https://mateo951.github.io/project-review/)
+[Live Demo](https://mateo951.github.io/portfolio/)
 
-<!-- Project's repo -->
 To get a local copy up and running follow these simple example steps.
 - On your terminal write the following command to clone the repository
-    - git clone git@github.com:mateo951/project-review.git
+    - git clone git@github.com:mateo951/portfolio.git
 
-<!-- Project's author -->
 Authors
 👤 Mateo Villagómez
 
@@ -31,8 +24,7 @@ LinkedIn: [@Mateo Villagómez](https://www.linkedin.com/in/mateo-villagómez/)
 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 
-<!-- Project's issues -->
-Feel free to check the [issues](https://github.com/mateo951/project-review/issues) page.
+Feel free to check the [issues](https://github.com/mateo951/portfolio/issues) page.
 
 Show your support
 Give a ⭐️ if you like this project!
