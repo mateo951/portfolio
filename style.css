@@ -60,10 +60,17 @@ nav ul li {
   align-content: center;
 }
 
-nav ul li a 
-{
+nav ul li a {
   width: 20px;
   height: 20px;
+}
+
+aside a:hover {
+  background-color: #36b37f;
+}
+
+aside a:active {
+  background-color: #008552;
 }
 
 nav ul li a:hover {
@@ -91,14 +98,6 @@ div aside {
   margin-top: 40px;
   text-decoration: none;
   cursor: pointer;
-}
-
-aside a:hover {
-  background-color: #36b37f;
-}
-
-aside a:active {
-  background-color: #008552;
 }
 
 #bttn-img {
