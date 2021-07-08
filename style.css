@@ -1,3 +1,48 @@
 body {
-  background-color: white;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100%;  
+  padding:0;
+  margin:0;
 }
+
+.flex-container {
+  position: relative;
+  border: 1px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 30px;
+}
+
+.bg-img {
+  /* Using css background-image property 
+  becuase its not part of the design */
+  background-image: url("images/header-illsutration-mobile.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  max-height: 100vh;
+  padding-top: 60px;
+}
+
+#flex-container-headline 
+{
+  height: 100vh;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+#header-welcome-link {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  color: #28352F;
+  width: 90px;
+  text-decoration: none;
+  /* Text appearing blurry, fix apply */ 
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
