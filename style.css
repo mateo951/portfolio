@@ -62,8 +62,11 @@ li {
   padding: 30px 30px;
 }
 
-.headline-paragraphs {
+.font-family {
   font-family: 'Inter', sans-serif;
+}
+
+.headline-paragraphs {
   font-style: normal;
   text-align: center;
   max-width: 87%;
@@ -72,7 +75,6 @@ li {
 }
 
 .works-title {
-  font-family: 'Inter', sans-serif;
   text-align: center;
   max-width: 100%;
   font-size: 24px;
@@ -82,7 +84,6 @@ li {
 
 .aboutme-title {
   color: #172b4d;
-  font-family: 'Inter', sans-serif;
   font-weight: bold;
   font-size: 40px;
   line-height: 52px;
@@ -112,20 +113,17 @@ li {
 }
 
 .flex-title-content {
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .card-font {
-  font-family: Inter, sans-serif;
   color: #3a4a42;
   font-size: 24px;
 }
 
 .aboutme-font {
-  font-family: Inter, sans-serif;
   color: #172b4d;
   font-size: 24px;
   font-style: normal;
@@ -134,7 +132,6 @@ li {
 
 .techs-items-font {
   color: #3a4a42;
-  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -145,7 +142,6 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
   justify-content: center;
   margin-top: 25px;
 }
@@ -188,17 +184,8 @@ section ul {
   margin-top: 25px;
 }
 
-div aside {
-  list-style-type: none;
-  margin: 70px;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
 .round-bttn {
   font-size: 18px;
-  font-family: 'Inter', sans-serif;
   background-color: white;
   border: 1px solid gray;
   border-radius: 60px;
@@ -206,10 +193,10 @@ div aside {
   padding: 15px 19px;
   text-decoration: none;
   cursor: pointer;
+  margin-top: 50px;
 }
 
 .bttn {
-  font-family: 'Inter', sans-serif;
   background-color: #36b37f; /* Green */
   border: none;
   border-radius: 4px;
@@ -343,7 +330,6 @@ div aside {
 }
 
 #header-welcome-link {
-  font-family: 'Inter', sans-serif;
   font-size: 20px;
   font-weight: 900;
   text-decoration: none;
