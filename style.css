@@ -1,52 +1,23 @@
 /* CSS RESET */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+html,
 body {
-	line-height: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
-ol, ul {
-	list-style: none;
+
+/* HTML5 display-role reset for older browsers */
+body {
+  line-height: 1;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 /* CSS RESET */
 
 body html {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -238,7 +209,7 @@ section ul {
   font-size: 17px;
   line-height: 24px;
   width: 128px;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   text-align: center;
 }
 
@@ -276,7 +247,7 @@ section ul {
   background-color: #ebf0ee;
   grid-column-gap: 50px;
   min-height: 478px;
-  margin: 20px 30px;
+  margin: 20px 20px;
   border: 1px solid #d0d9d4;
   border-radius: 8px;
   justify-items: center;
@@ -288,8 +259,9 @@ section ul {
   background-color: #ebf0ee;
   border: 1px solid #d0d9d4;
   border-radius: 8px;
+  width: 90vw;
   min-height: 352px;
-  margin: 30px 30px;
+  margin: 30px auto;
 }
 
 .grid-item-2 {
@@ -300,6 +272,7 @@ section ul {
 
 .grid-item-aboutme-1 {
   align-items: center;
+  width: 90vw;
 }
 
 .grid-item-aboutme-2 {
@@ -329,11 +302,11 @@ section ul {
 }
 
 .margin-aboutme-items-1 {
-  margin: 3px 5px;
+  margin: 3px 2px;
 }
 
 .margin-aboutme-items-2 {
-  margin: 3px 8px;
+  margin: 3px 4px;
 }
 
 .techs-items-1 {
