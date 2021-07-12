@@ -25,6 +25,10 @@ li {
   display: inline-block;
 }
 
+.float-positioning {
+  float: left;
+}
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
