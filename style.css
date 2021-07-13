@@ -83,13 +83,13 @@ li {
   padding: 0;
 }
 
-.aboutme-title {
+.section-title {
   color: #172b4d;
   font-weight: bold;
   font-size: 40px;
   line-height: 52px;
-  margin: 0;
-  margin-top: 30px;
+  margin: 30px 24px;
+  text-align: center;
 }
 
 .bg-img {
@@ -350,4 +350,21 @@ section ul {
 
 .aboutme-bttn {
   margin-top: 30px;
+}
+
+.input-layout {
+  width: 80vw;
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid #D0D9D4;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.input-submit-bttn {
+  margin-top: 20px;
+}
+
+.flex-form {
+  width: 100vw;
 }
