@@ -407,3 +407,7 @@ section ul {
 .flex-form {
   width: 100vw;
 }
+
+#msg {
+  min-height: 114px;
+}
