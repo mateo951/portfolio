@@ -1,11 +1,8 @@
 /* CSS RESET */
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
+  overflow-x: hidden;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -98,11 +95,10 @@ li {
 }
 
 .headline-bg {
-  background-image: url("images/headerbg.svg");
+  background-image: url("images/headerbg-mobile.svg");
   background-position: center;
   max-width: 100%;
   min-height: 100vh;
-  height: 100%;
 }
 
 .aboutme-bg {
@@ -160,14 +156,15 @@ nav ul {
   margin-top: 25px;
 }
 
-nav ul li {
+.social-links {
   padding: 11px;
   align-content: center;
-}
-
-nav ul li a {
   width: 20px;
   height: 20px;
+}
+
+footer ul li a {
+
 }
 
 aside a:hover {
@@ -252,13 +249,21 @@ section ul {
   text-align: center;
 }
 
-.p1 {
-  padding-top: 70px;
-  color: #172b4d;
+.headline-p {
   font-size: 40px;
   font-weight: bolder;
   line-height: 52px;
 }
+
+.p1 {
+  padding-top: 55px;
+  color: #172b4d;
+}
+
+.p4 {
+  color: #36b37f;
+}
+
 
 .p2 {
   color: #172b4d;
@@ -376,13 +381,6 @@ section ul {
   color: #28352f;
 }
 
-.p4 {
-  color: #36b37f;
-  font-size: 40px;
-  font-weight: bolder;
-  line-height: 52px;
-}
-
 .works-div-1 {
   margin-bottom: 60px;
 }
@@ -410,4 +408,52 @@ section ul {
 
 #msg {
   min-height: 114px;
+}
+
+@media screen and (min-width: 768px){
+  .headline-bg {
+    background-image: url(images/headerbg-desktop.svg);
+  }
+  .flex-container.header-items {
+    display: none;
+  }
+  .bg-img.headline-bg {
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+    min-width: 70vw;
+  }
+  .p1 {
+    padding-top: 10vh;
+  }
+  .headline-p {
+    font-size: 48px;
+    font-weight: bolder;
+    line-height: 52px;
+  }
+  .header-nav-style {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: #172B4D;
+    padding: 0px 15px;
+    margin: 20px 0px;
+  }
+  .headline-paragraphs {
+    max-width: 56%;
+  }
+  .font-family.headline-paragraphs.p3 br {
+    display: none;
+  }
+  #recent-1{
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .flex-container.flex-justify-center.font-family {
+    display: none;
+  }
+  #recent-2{
+    display: none;
+  }
 }
