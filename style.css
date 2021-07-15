@@ -89,7 +89,7 @@ li {
 }
 
 .aboutme-bg {
-  background-image: url("images/aboutmebg.svg");
+  background-image: url("images/aboutmebg-mobile.svg");
   max-width: 100%;
   min-height: 375px;
   height: 100%;
@@ -401,6 +401,13 @@ section ul {
   .headline-bg {
     background-image: url(images/headerbg-desktop.svg);
   }
+
+  .aboutme-bg {
+    background-image: url("images/aboutmebg-desktop.png");
+    background-position: center;
+    background-size: contain;
+  }
+
   
   .flex-container.header-items {
     display: none;
