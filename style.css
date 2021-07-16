@@ -517,17 +517,38 @@ section ul {
     position: relative;
   }
 
-  .aboutme-img-left {
+  .aboutme-img-style {
     position: absolute;
-    left: 0px;
-    margin-top: 140px;
     z-index: -1;
   }
 
+  .aboutme-img-left {
+    left: 0px;
+    margin-top: 140px;
+  }
+
   .aboutme-img-right {
-    position: absolute;
     right: 0px;
+  }
+
+  .form-img {
+    position: absolute;
+    margin-top: 100px;
     z-index: -1;
+  }
+
+  .form-img-left {
+    left: 0px;
+    margin-top: 200px;
+  }
+
+  .form-img-middle {
+    left: 274px;
+    margin-top: 400px;
+  }
+
+  .form-img-right {
+    right: 0px;
   }
   
   .grid-item-aboutme-1 {
