@@ -179,6 +179,7 @@ div a:active {
 
 div a:hover {
   background-color: #008552;
+  transform: scale(1.1);
 }
 
 article a:hover {
@@ -244,6 +245,7 @@ section ul {
   width: 128px;
   margin-bottom: 35px;
   text-align: center;
+  transition: all 1s ease-in-out;
 }
 
 .headline-p {
