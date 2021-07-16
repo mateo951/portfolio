@@ -65,7 +65,7 @@
   <section>
     <div class="flex-container flex-title-content works-div-1">
       <h2 id="recent-1" class="font-family headline-paragraphs p3">My Recent<br><span>Works</span></h2>
-      <h2 id="recent-2" class="font-family headline-paragraphs p3">My Recent Works</span></h2>
+      <h2 id="recent-2" class="font-family headline-paragraphs p3">My Recent Works</h2>
       <img src="images/buttons/indicator.png" alt="nav button"> 
     </div>
     <div class="flex-container flex-justify-center">
@@ -192,6 +192,8 @@
     </div>
   </section>
   <section class="bg-img aboutme-bg">
+    <div class="aboutme-img"><img class="aboutme-img-left" src="images/aboutme-desktop-left.svg"></div>
+    <div class="aboutme-img "><img class="aboutme-img-right" src="images/aboutme-desktop-right.svg"></div>
     <article class="flex-container flex-title-content">
       <h2 class="section-title font-family">About me</h2>
       <p class="headline-paragraphs p2 font-family"> I can help you build a product, 
@@ -202,16 +204,16 @@
     </article>
   </section>
   <section>
-    <ul>
-      <li class="grid-container-aboutme">
-        <ul>
+    <ul class="flex-container flex-justify-center techs-spacing">
+      <li class="grid-container-aboutme flex-item-techs">
+        <ul class="">
           <li class="grid-item-aboutme-1 flex-container flex-justify-center">
             <img src="images/Icons/languages.png" alt="languages icon" class="icon-languages">
           </li>
           <li class="grid-item-aboutme-2 flex-container flex-column-center-axis">
             <h2 class="aboutme-font font-family">Languages</h2>
             <div class="flex-container flex-container-techs flex-container-height-1 techs-items-font font-family">
-              <ul class="flex-width">
+              <ul>
                 <li>
                   <p class="aboutme-items-basic margin-aboutme-items-1">JavaScript</p>
                 </li>
@@ -229,7 +231,7 @@
           </li>
         </ul>
       </li>
-      <li class="grid-container-aboutme">
+      <li class="grid-container-aboutme flex-item-techs">
         <ul>
           <li class="grid-item-aboutme-1 flex-container flex-justify-center">
             <img src="images/Icons/languages.png" alt="languages icon" class="icon-languages">
@@ -256,7 +258,7 @@
           </li>
         </ul>
       </li>
-      <li class="grid-container-aboutme">
+      <li class="grid-container-aboutme flex-item-techs">
         <ul>
           <li class="grid-item-aboutme-1 flex-container flex-justify-center">
             <img src="images/Icons/languages.png" alt="languages icon" class="icon-languages">
@@ -285,45 +287,51 @@
       </li>
     </ul>
   </section>
-  <section class="flex-container flex-title-content">
-    <h2 class="section-title font-family">I'm always interested in hearing about new projects, 
-      so if you'd like to chat please get in touch.</h2>
-    <form class="flex-container flex-title-content flex-form" action="https://formspree.io/f/xnqlbpyj" method="post">
-      <input class="input-layout" type="text" id="name" placeholder="Full Name" name="client_name" maxlength="30" required>
-      <input class="input-layout" type="email" id="mail" placeholder="Email Address" name="client_email" required>
-      <textarea class="input-layout" id="msg" placeholder="Enter text here" name="user_message" maxlength="500" required></textarea>
-      <input class="bttn input-submit-bttn" type="submit" value="Get in touch">
-    </form>
-    <footer>
-      <ul class="flex-container">
-        <li>
-          <a class="social-links" href="#">
-            <img src="images/socialLinks/twitter.svg" alt="Twitter Link">
-          </a>
-        </li>
-        <li>
-          <a class="social-links" href="#">
-            <img src="images/socialLinks/linkedin.svg" alt="Linked Link">
-          </a>
-        </li>
-        <li>
-          <a class="social-links" href="#">
-            <img src="images/socialLinks/medium.svg" alt="Medium Link">
-          </a>
-        </li>
-        <li>
-          <a class="social-links" href="#">
-            <img src="images/socialLinks/github.svg" alt="Github Link">
-          </a>
-        </li>
-        <li>
-          <a class="social-links" href="#">
-            <img src="images/socialLinks/angel.svg" alt="Angel Link">
-          </a>
-        </li>
-      </ul>
+  <section class="form-bg">
+    <div class="aboutme-img"><img class="aboutme-img-left" src="images/aboutme-desktop-left.svg"></div>
+    <div class="aboutme-img "><img class="aboutme-img-right" src="images/aboutme-desktop-right.svg"></div>
+    <div class="flex-container flex-title-content form-desktop">
+      <h2 class="section-title form-section-title font-family form-paragraphs">I'm always interested in hearing about new projects, 
+        so if you'd like to chat please get in touch.</h2>
+      <form class="flex-container form-content flex-form" action="https://formspree.io/f/xnqlbpyj" method="post">
+        <input class="input-layout" type="text" id="name" placeholder="Full Name" name="client_name" maxlength="30" required>
+        <input class="input-layout" type="email" id="mail" placeholder="Email Address" name="client_email" required>
+        <textarea class="input-layout" id="msg" placeholder="Enter text here" name="user_message" maxlength="500" required></textarea>
+        <input class="bttn input-submit-bttn" type="submit" value="Get in touch">
+      </form>
+    </div>
+    <footer class="footer">
+      <div class="footer-items">
+        <ul class="flex-container flex-justify-center">
+          <li>
+            <a class="social-links" href="#">
+              <img src="images/socialLinks/twitter.svg" alt="Twitter Link">
+            </a>
+          </li>
+          <li>
+            <a class="social-links" href="#">
+              <img src="images/socialLinks/linkedin.svg" alt="Linked Link">
+            </a>
+          </li>
+          <li>
+            <a class="social-links" href="#">
+              <img src="images/socialLinks/medium.svg" alt="Medium Link">
+            </a>
+          </li>
+          <li>
+            <a class="social-links" href="#">
+              <img src="images/socialLinks/github.svg" alt="Github Link">
+            </a>
+          </li>
+          <li>
+            <a class="social-links" href="#">
+              <img src="images/socialLinks/angel.svg" alt="Angel Link">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a class="font-family email-font-style">mateovillagomez1995@gmail.com</a>
     </footer>
-    <a class="font-family email-font-style">mateovillagomez1995@gmail.com</a>
   </section>
 </body>
 </html>
