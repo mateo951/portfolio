@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -164,10 +165,6 @@ nav ul {
   height: 20px;
 }
 
-footer ul li a {
-
-}
-
 aside a:hover {
   background-color: #36b37f;
 }
@@ -263,7 +260,6 @@ section ul {
 .p4 {
   color: #36b37f;
 }
-
 
 .p2 {
   color: #172b4d;
@@ -410,7 +406,7 @@ section ul {
   min-height: 114px;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .footer {
     position: relative;
     min-height: 250px;
@@ -437,7 +433,7 @@ section ul {
     background-size: contain;
     margin-top: 150px;
   }
-  
+
   .flex-container.header-items {
     display: none;
   }
@@ -445,7 +441,7 @@ section ul {
   .bg-img.headline-bg {
     align-items: center;
     justify-content: space-between;
-    padding: 0px 30px;
+    padding: 0 30px;
     min-width: 70vw;
   }
 
@@ -463,9 +459,9 @@ section ul {
     font-weight: 600;
     font-size: 15px;
     line-height: 20px;
-    color: #172B4D;
-    padding: 0px 15px;
-    margin: 20px 0px;
+    color: #172b4d;
+    padding: 0 15px;
+    margin: 20px 0;
   }
 
   .headline-paragraphs {
@@ -481,7 +477,7 @@ section ul {
     display: none;
   }
 
-  #recent-1{
+  #recent-1 {
     display: none;
   }
 
@@ -523,12 +519,12 @@ section ul {
   }
 
   .aboutme-img-left {
-    left: 0px;
+    left: 0;
     margin-top: 140px;
   }
 
   .aboutme-img-right {
-    right: 0px;
+    right: 0;
   }
 
   .form-img {
@@ -538,7 +534,7 @@ section ul {
   }
 
   .form-img-left {
-    left: 0px;
+    left: 0;
     margin-top: 200px;
   }
 
@@ -548,9 +544,9 @@ section ul {
   }
 
   .form-img-right {
-    right: 0px;
+    right: 0;
   }
-  
+
   .grid-item-aboutme-1 {
     width: unset;
   }
@@ -572,13 +568,16 @@ section ul {
   .flex-item-projects {
     width: 26%;
   }
+
   .flex-item-techs {
     width: 26%;
     margin: 30px 10px;
   }
+
   .grid-container-aboutme {
     display: block;
   }
+
   .headline-paragraphs {
     width: 58%;
   }
@@ -589,11 +588,11 @@ section ul {
     display: none;
   }
 
-  #recent-2{
+  #recent-2 {
     display: none;
   }
 
-  .footer-items{
+  .footer-items {
     padding: 20px 20px;
   }
 
@@ -602,8 +601,6 @@ section ul {
   }
 
   .aboutme-img {
-    display: none
+    display: none;
   }
 }
-
-
