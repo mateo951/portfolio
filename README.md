@@ -8,7 +8,7 @@ Built With
 - HTML, CSS, JS
 - Linters, Node.js, Git, Flexbox
 
-[Live Demo](https://mateo951.github.io/portfolio/)
+[Portolio Live Demo](https://mateo951.github.io/portfolio/)
 
 To get a local copy up and running follow these simple example steps.
 - On your terminal and run the following command to clone the repository
