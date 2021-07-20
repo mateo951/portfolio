@@ -91,14 +91,14 @@ li {
 }
 
 .headline-bg {
-  background-image: url("images/headerbg-mobile.svg");
+  background-image: url('images/headerbg-mobile.svg');
   background-position: center;
   max-width: 100%;
   min-height: 100vh;
 }
 
 .aboutme-bg {
-  background-image: url("images/aboutmebg-mobile.svg");
+  background-image: url('images/aboutmebg-mobile.svg');
   max-width: 100%;
   min-height: 375px;
   height: 100%;
@@ -191,25 +191,25 @@ nav ul li a:hover {
   color: white;
 }
 
-input[class="input-layout"]:hover {
+input[class='input-layout']:hover {
   border: 1px solid #36b37f;
 }
 
-input[class="input-layout"]:focus {
+input[class='input-layout']:focus {
   outline: none !important;
   border: 1px solid #008552;
 }
 
-textarea[class="input-layout"]:hover {
+textarea[class='input-layout']:hover {
   border: 1px solid #36b37f;
 }
 
-textarea[class="input-layout"]:focus {
+textarea[class='input-layout']:focus {
   outline: none !important;
   border: 1px solid #008552;
 }
 
-input[type="submit"]:hover {
+input[type='submit']:hover {
   background-color: #008552;
 }
 
@@ -509,6 +509,10 @@ section ul {
     margin-bottom: 30px;
     margin-right: 24px;
     padding-bottom: 120px;
+  }
+
+  ::placeholder {
+    color: #332f2e;
   }
 
   .aboutme-img {
