@@ -1,0 +1,6 @@
+$test: white;
+$border-dark: rgba($test, 0.88);
+
+.alert {
+  border: 1px solid $border-dark;
+}
