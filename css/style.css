@@ -146,7 +146,6 @@ li {
   font-weight: normal;
   font-size: 20px;
   line-height: 32px;
-  text-align: center;
   word-wrap: break-word;
 }
 
@@ -596,6 +595,10 @@ section ul {
 
   #recent-2 {
     display: none;
+  }
+
+  .footer {
+    text-align: center;
   }
 
   .footer-items {
