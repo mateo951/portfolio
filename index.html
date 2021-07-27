@@ -23,7 +23,7 @@
   <header>
     <div class="flex-container header-items">
       <a href="#" class=" header-welcome-link font-family">Welcome</a>
-      <img src="images/buttons/union.png" alt="button opens navigation links">
+      <img src="images/buttons/union.png" alt="button opens navigation links" class="menu">
     </div>
   </header>
   <section class="bg-img headline-bg">
@@ -75,7 +75,7 @@
       </aside>
     </div>
   </section>
-  <section>
+  <section class="works-section" id="section-1">
     <div class="flex-container flex-title-content works-div-1">
       <h2 id="recent-1" class="font-family headline-paragraphs p3">My Recent<br><span>Works</span></h2>
       <h2 id="recent-2" class="font-family headline-paragraphs p3">My Recent Works</h2>
@@ -204,7 +204,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-img aboutme-bg">
+  <section class="bg-img aboutme-bg" id="section-2">
     <div class="aboutme-img"><img class="aboutme-img-style aboutme-img-left" src="images/aboutme-desktop-left.svg"
         alt="about me background image"></div>
     <div class="aboutme-img "><img class="aboutme-img-style aboutme-img-right" src="images/aboutme-desktop-right.svg"
@@ -302,7 +302,7 @@
       </li>
     </ul>
   </section>
-  <section class="form-bg">
+  <section class="form-bg" id="section-3">
     <div class="aboutme-img"><img class="form-img form-img-left" src="images/form-desktop-left.svg"
         alt="contact form background image"></div>
     <div class="aboutme-img"><img class="form-img form-img-middle" src="images/form-desktop-middle.svg"
@@ -315,8 +315,9 @@
         so if you'd like to chat please get in touch.</h2>
       <form class="flex-container form-content flex-form" action="https://formspree.io/f/xnqlbpyj" method="post">
         <input class="input-layout" type="text" id="name" placeholder="Full Name" name="client_name" maxlength="30"
-          required>
-        <input class="input-layout" type="email" id="mail" placeholder="Email Address" name="client_email" required>
+          required autocomplete="off">
+        <input class="input-layout" type="email" id="mail" placeholder="Email Address" name="client_email" required
+          autocomplete="off">
         <textarea class="input-layout" id="msg" placeholder="Enter text here" name="user_message" maxlength="500"
           required></textarea>
         <input class="bttn input-submit-bttn" type="submit" value="Get in touch">
@@ -355,6 +356,7 @@
       <a class="font-family email-font-style">mateovillagomez1995@gmail.com</a>
     </footer>
   </section>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
