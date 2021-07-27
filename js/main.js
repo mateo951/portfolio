@@ -6,8 +6,6 @@ const header = document.querySelector('header');
 const worksSection = document.querySelector('.works-section');
 const blurElements = [mainpage, header, worksSection];
 
-console.log(hamBttn);
-
 function UnBlurSections() {
   for (let i = 0; i < blurElements.length; i += 1) {
     blurElements[i].classList.remove('blur-content');
