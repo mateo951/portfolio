@@ -13,6 +13,16 @@ li {
 a {
   text-decoration: none;
 }
+#overlay-popup{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #fff;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 20px;
+}
 
 #overlay {
   position: absolute;
