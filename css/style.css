@@ -10,15 +10,15 @@ li {
   display: inline-block;
 }
 
-a, u  {
+a {
   text-decoration: none;
 }
 
 #overlay {
   position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
+  left: 0;
+  right: 0;
+  top: 0;
   bottom: 5%;
   background: #fff;
   z-index: 2;
@@ -28,10 +28,10 @@ a, u  {
 
 #overlay-bg {
   position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   background: #e5e5e5;
   z-index: 1;
   text-align: center;
@@ -62,7 +62,7 @@ a, u  {
 }
 
 .mobile-menu-li a {
-  color: #3A4A42;
+  color: #3a4a42;
 }
 
 .flex-container {

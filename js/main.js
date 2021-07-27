@@ -16,7 +16,7 @@ function UnBlurSections() {
 hamBttn.addEventListener('click', () => {
   // Create div for mobile menu
   div.id = 'overlay';
-  div2.id = 'overlay-bg'
+  div2.id = 'overlay-bg';
   div.innerHTML = '<img src="./images/buttons/Icon.png" class="cancelBttn"></img>'
     + '<ul class="mobile-menu-ul">'
     + '<li class="mobile-menu-li"><a href="#section-1">Porfolio</a></li>'
@@ -42,7 +42,7 @@ hamBttn.addEventListener('click', () => {
   // Adding listeners to li tags
   const sections = document.querySelectorAll('.mobile-menu-li');
   for (let i = 0; i < sections.length; i += 1) {
-    sections[i].addEventListener('click', (event) => {
+    sections[i].addEventListener('click', () => {
       div.remove();
       div2.remove();
       UnBlurSections();
