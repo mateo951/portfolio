@@ -541,7 +541,7 @@ section ul {
 }
 
 .input-layout {
-  width: 80vw;
+  width: 100%;
   padding: 15px;
   margin: 15px 0;
   border: 1px solid #d0d9d4;
@@ -559,6 +559,17 @@ section ul {
 
 #msg {
   min-height: 114px;
+}
+
+.validationText {
+  color: #ff6163;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.validation-container {
+  text-align: center;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -805,6 +816,10 @@ section ul {
 }
 
 @media screen and (max-width: 767px) {
+  .input-layout {
+    width: 85%;
+  }
+
   .flex-container.flex-justify-center.font-family {
     display: none;
   }

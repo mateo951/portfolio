@@ -152,3 +152,55 @@ function addEventListenerList() {
   }
 }
 addEventListenerList();
+
+// Form Validations
+const form = document.getElementById('clientInfo');
+const emailFormat = 'Please enter a valid email adress';
+
+function hasValue(input) {
+  if (input.value === '') {
+    return false;
+  }
+  return true;
+}
+
+function showMessage(input, message) {
+  const msg = input.parentNode.querySelector('small');
+  msg.innerText = message;
+}
+
+function validateEmail(input, emailFormat) {
+  const email = input.value.trim();
+  // check if the input is not empty
+  if (!hasValue(input.value)) {
+    return false;
+  }
+
+  const lowerCaseValidation = /[A-Z]/g;
+  if (email.match(lowerCaseValidation)) {
+    input.value = email.toLowerCase();
+    return showMessage(input, emailFormat);
+  }
+  return true;
+}
+
+function hideErrorMessages() {
+  const msgs = document.querySelectorAll('.validationText');
+  if (msgs.length > 0) {
+    for (let i = 0; i < msgs.length; i += 1) {
+      msgs[i].innerText = '';
+    }
+  }
+}
+
+form.addEventListener('submit', (event) => {
+  // Lower case email
+  const email = form.elements.client_email;
+  const emailValid = validateEmail(email, emailFormat);
+
+  if (emailValid) {
+    hideErrorMessages();
+  } else {
+    event.preventDefault();
+  }
+});
