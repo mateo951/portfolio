@@ -152,21 +152,3 @@ function addEventListenerList() {
   }
 }
 addEventListenerList();
-
-/*
-
-<div class="grid-item-1 project-image-container"></div>
-<div class="grid-item-2">
-  <div class="flex-container flex-column-center-axis works-title font-family">
-    <div class="flex-item-1 flex-container flex-column-center-axis">
-      <h3 class="card-font card-Title font-family"></h3>
-    </div>
-    <div class="flex-item-2 flex-container techs-items-font font-family">
-    </div>
-    <div class="flex-item-1 flex-container flex-column-center-axis">
-      <a href="#" class="bttn font-family popup" id="0">See Project</a>
-    </div>
-  </div>
-</div>
-
-*/
