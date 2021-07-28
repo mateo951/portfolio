@@ -4,20 +4,17 @@ const grayBgDiv = document.createElement('div');
 const hamBttn = document.querySelector('.menu');
 
 hamBttn.addEventListener('click', () => {
-  // Create div for mobile menu
   div.id = 'overlay';
   div.classList.add('overlay');
   grayBgDiv.id = 'overlay-menu-bg';
   grayBgDiv.classList.add('overlay');
-  div.innerHTML =
-    '<img src="./images/buttons/Icon.png" class="cancelBttn"></img>' +
-    '<ul class="mobile-menu-ul">' +
-    '<li class="mobile-menu-li"><a href="#section-1">Porfolio</a></li>' +
-    '<li class="mobile-menu-li"><a href="#section-2">About</a></li>' +
-    '<li class="mobile-menu-li"><a href="#section-3">Contact</a></li>' +
-    '</ul>';
-  grayBgDiv.innerHTML =
-    '<img class="overlay-bg-separator" src="./images/buttons/separator-mobile.png"></img>';
+  div.innerHTML = '<img src="./images/buttons/Icon.png" class="cancelBttn"></img>'
+    + '<ul class="mobile-menu-ul">'
+    + '<li class="mobile-menu-li"><a href="#section-1">Porfolio</a></li>'
+    + '<li class="mobile-menu-li"><a href="#section-2">About</a></li>'
+    + '<li class="mobile-menu-li"><a href="#section-3">Contact</a></li>'
+    + '</ul>';
+  grayBgDiv.innerHTML = '<img class="overlay-bg-separator" src="./images/buttons/separator-mobile.png"></img>';
   document.body.appendChild(div);
   document.body.appendChild(grayBgDiv);
   div.style.display = 'block';
@@ -40,47 +37,108 @@ hamBttn.addEventListener('click', () => {
   }
 });
 
+// Projects Data
+const projects = [
+  {
+    name: 'The One',
+    imgUrl: './images/projects/project-detail-img.png',
+    techs: ['Codekit', 'Terminal', 'Codepen'],
+    description: 'The One and only',
+  },
+  {
+    name: 'The Second',
+    imgUrl: './images/projects/project-detail-img.png',
+    techs: ['Github', 'Bootstrap', 'Git'],
+    description: 'The Second and only',
+  },
+  {
+    name: 'The Third',
+    imgUrl: './images/projects/project-detail-img.png',
+    techs: ['Codepen', 'Codekit', 'Bootstrap'],
+    description: 'The Third and only',
+  },
+  {
+    name: 'The Forth',
+    imgUrl: './images/projects/project-detail-img.png',
+    techs: ['Codekit', 'Sass', 'Terminal'],
+    description: 'The Forth and only',
+  },
+  {
+    name: 'The Fifth',
+    imgUrl: './images/projects/project-detail-img.png',
+    techs: ['Sass', 'Bootstrap', 'JQuery'],
+    description: 'The Fifth and only',
+  },
+  {
+    name: 'The Sixth',
+    imgUrl: './images/projects/project-detail-img.png',
+    techs: ['Terminal', 'Codepen', 'Github'],
+    description: 'The Sixth and only',
+  },
+];
+
+// Projects Creation
+function createProjectsSeciton() {
+  if (projects.length !== 0) {
+    const titles = document.querySelectorAll('.card-Title');
+    const images = document.querySelectorAll('.project-image-container');
+    const techs = document.querySelectorAll('.flex-item-2');
+    for (let i = 0; i < projects.length; i += 1) {
+      titles[i].innerHTML = projects[i].name;
+      images[i].innerHTML = `<img class="project-image" src=${projects[i].imgUrl}>`;
+      let techsHTML = '';
+      for (let j = 0; j < projects[i].techs.length; j += 1) {
+        techsHTML += `<p class="techs-items-basic techs-items-1">${projects[i].techs[j]}</p>`;
+        techs[i].innerHTML = techsHTML;
+      }
+    }
+  }
+}
+createProjectsSeciton();
+
 // Project popups functionality
 const projectDiv = document.createElement('div');
 const projectBttns = document.querySelectorAll('.popup');
 
 function addEventListenerList() {
   for (let i = 0; i < projectBttns.length; i += 1) {
-    projectBttns[i].addEventListener('click', () => {
+    projectBttns[i].addEventListener('click', (event) => {
+      const projectID = event.target.id;
       grayBgDiv.id = 'overlay-popup-projects';
       grayBgDiv.classList.add('overlay');
       projectDiv.id = 'overlay-popup';
       projectDiv.classList.add('overlay');
-      projectDiv.innerHTML =
-        '<div class="image-container-popup"><img  class="popup-project-image" src="./images/projects/project-detail-img.png">' +
-        '<img id="cancel-detail" src="./images/buttons/cancel-detail-2.png"></div>' +
-        '<div class="popup-content">'+
-        '<h2 class="popup-title font-family font-color">Keeping track of hundreds of components</h2>' +
-        '<ul class="popup-text font-family">' +
-        '<li class="popup-li popup-items-basic">Ruby on Rails</li>' +
-        '<li class="popup-li popup-items-basic">css</li>' +
-        '<li class="popup-li popup-items-basic">Javascript</li>' +
-        '</ul>' +
-        '<p class="font-family popup-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy' +
-        'text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply' +
-        'dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the' +
-        '1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea</p>' +
-        '<div class="bttn-popup-container"><a href="#" class="bttn-popup font-family">See Source</a>' +
-        '<a href="#" class="bttn-popup font-family">See Live</a></div>' +
-        '</div>';
+
+      // Techs Creation
+      let techsHTMLDetail = '';
+      for (let j = 0; j < projects[i].techs.length; j += 1) {
+        techsHTMLDetail += `<li class="popup-li popup-items-basic">${projects[i].techs[j]}</li>`;
+      }
+
+      projectDiv.innerHTML = `<div class="image-container-popup"><img  class="popup-project-image" src="${projects[projectID].imgUrl}">`
+        + '<img id="cancel-detail" src="./images/buttons/cancel-detail-2.png"></div>'
+        + '<div class="popup-content">'
+        + `<h2 class="popup-title font-family font-color">${projects[projectID].name}</h2>`
+        + `<ul class="popup-text font-family">${
+          techsHTMLDetail
+        }</ul>`
+        + `<p class="font-family popup-text">${projects[projectID].description} Lorem Ipsum is simply dummy text of the printing`
+        + 'and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown'
+        + 'printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and'
+        + 'typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer'
+        + 'took a galley of type and scrambled it 1960s with the relea</p>'
+        + '<div class="bttn-popup-container"><a href="#" class="bttn-popup font-family">See Source</a>'
+        + '<a href="#" class="bttn-popup font-family">See Live</a></div>'
+        + '</div>';
       grayBgDiv.appendChild(projectDiv);
       document.body.appendChild(grayBgDiv);
 
-      let cancelDetail = document.querySelector('#cancel-detail');
+      const cancelDetail = document.querySelector('#cancel-detail');
       cancelDetail.addEventListener('click', () => {
         projectDiv.remove();
         grayBgDiv.remove();
       });
-    
     });
   }
 }
 addEventListenerList();
-
-
-

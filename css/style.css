@@ -55,7 +55,7 @@ a {
 
 #overlay-popup-projects {
   bottom: 0;
-  background: #C1C7D0;
+  background: #c1c7d0;
   z-index: 1;
   width: 100%;
 }
@@ -64,13 +64,18 @@ a {
   margin-top: 98.5vh;
 }
 
+.project-image {
+  height: 100%;
+  width: 100%;
+}
+
 .image-container-popup {
   margin: 14px;
 }
 
 .popup-project-image {
-  max-width:100%;
-  max-height:100%;
+  max-width: 100%;
+  max-height: 100%;
   min-height: 25vh;
   height: auto;
   border-radius: 10px;
@@ -85,7 +90,7 @@ a {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  color: #3A4A42;
+  color: #3a4a42;
   font-size: 12px;
   text-align: center;
 }
@@ -121,7 +126,6 @@ a {
   padding: 10px;
   margin-right: 10px;
   text-decoration: none;
-  font-weight: 500;
   font-size: 15px;
   line-height: 24px;
   font-weight: 300;
@@ -441,6 +445,7 @@ section ul {
   border: 1px solid #d0d9d4;
   border-radius: 8px;
   justify-items: center;
+  width: 303px;
 }
 
 .grid-container-aboutme {
@@ -557,7 +562,6 @@ section ul {
 }
 
 @media screen and (min-width: 768px) {
-
   #overlay-popup {
     left: 15%;
     right: 15%;
@@ -588,7 +592,7 @@ section ul {
   .popup-text {
     width: 100%;
     float: left;
-    margin-top: 0px;
+    margin-top: 1px;
   }
 
   .popup-title {
@@ -766,14 +770,13 @@ section ul {
 }
 
 @media (min-width: 1140px) {
-
   .image-container-popup {
     margin: 14px;
     height: 45vh;
   }
 
   .popup-text {
-    margin-top: 5px;  
+    margin-top: 5px;
   }
 
   .bttn-popup-container {
