@@ -197,6 +197,14 @@ function showMessage(input, message) {
 	msg.innerText = message;
 }
 
+function hideErrorMessages(){
+  const msgs = document.querySelectorAll(".validationText");
+  if(msgs.length > 0){
+    for(let i = 0; i < msgs.length; i += 1){
+      msgs[i].innerText = '';
+    }
+  }
+}
 
 
 
