@@ -561,6 +561,16 @@ section ul {
   min-height: 114px;
 }
 
+.validationText {
+  color: #FF6163;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.validation-container {
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
   #overlay-popup {
     left: 15%;

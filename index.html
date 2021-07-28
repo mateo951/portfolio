@@ -193,13 +193,19 @@
       <h2 class="section-title form-section-title font-family form-paragraphs">I'm always interested in hearing about
         new projects,
         so if you'd like to chat please get in touch.</h2>
-      <form class="flex-container form-content flex-form" action="https://formspree.io/f/xnqlbpyj" method="post">
-        <input class="input-layout" type="text" id="name" placeholder="Full Name" name="client_name" maxlength="30"
-          required autocomplete="off">
-        <input class="input-layout" type="email" id="mail" placeholder="Email Address" name="client_email" required
-          autocomplete="off">
-        <textarea class="input-layout" id="msg" placeholder="Enter text here" name="user_message" maxlength="500"
-          required></textarea>
+      <form class="flex-container form-content flex-form" action="https://formspree.io/f/xnqlbpyj" method="post" id="clientInfo">
+        <div class="validation-container">
+          <input class="input-layout" type="text" id="name" placeholder="Full Name" name="client_name" maxlength="30" autocomplete="off">
+          <small class="validationText font-family" ></small>
+        </div>
+        <div class="validation-container">
+          <input class="input-layout" type="email" id="mail" placeholder="Email Address" name="client_email" autocomplete="off">
+          <small class="validationText font-family"></small>
+        </div>
+        <div class="validation-container">
+          <textarea class="input-layout" id="msg" placeholder="Enter text here" name="user_message" maxlength="500">
+          </textarea><small class="validationText font-family"></small>
+        </div>
         <input class="bttn input-submit-bttn" type="submit" value="Get in touch">
       </form>
     </div>

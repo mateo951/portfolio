@@ -152,3 +152,52 @@ function addEventListenerList() {
   }
 }
 addEventListenerList();
+
+// Form Validations
+const form = document.getElementById('clientInfo');
+const email_format = 'Please enter a valid email adress';
+const email_required = 'Please enter your email';
+
+form.addEventListener('submit', (event) => {
+  // Lower case email
+  let email = form.elements['client_email'];
+  let emailValid = validateEmail(email, email_required, email_format);
+
+  if(emailValid){
+    hideErrorMessages();
+  } else {
+    event.preventDefault();
+  }
+});
+
+function validateEmail(input, email_required, email_form) {
+  const email = input.value.trim();
+	// check if the input is not empty
+	if (!hasValue(input.value, email_required)) {
+		return false;
+	}
+
+  const lowerCaseValidation = /[A-Z]/g;
+	if (email.match(lowerCaseValidation)) {
+    input.value = email.toLowerCase();
+    return showMessage(input, email_format);
+	}
+	return true;
+}
+
+function hasValue(input, message) {
+	if (input.value === "") {
+    return false;
+	}
+  return true;
+}
+
+function showMessage(input, message) {
+	const msg = input.parentNode.querySelector("small");
+	msg.innerText = message;
+}
+
+
+
+
+
