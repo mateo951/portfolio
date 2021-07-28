@@ -80,17 +80,27 @@ const projects = [
 // Projects Creation
 function createProjectsSeciton() {
   if (projects.length !== 0) {
-    const titles = document.querySelectorAll('.card-Title');
-    const images = document.querySelectorAll('.project-image-container');
-    const techs = document.querySelectorAll('.flex-item-2');
+    const worksSection = document.querySelector('.worksSection');
     for (let i = 0; i < projects.length; i += 1) {
-      titles[i].innerHTML = projects[i].name;
-      images[i].innerHTML = `<img class="project-image" src=${projects[i].imgUrl}>`;
       let techsHTML = '';
       for (let j = 0; j < projects[i].techs.length; j += 1) {
         techsHTML += `<p class="techs-items-basic techs-items-1">${projects[i].techs[j]}</p>`;
-        techs[i].innerHTML = techsHTML;
       }
+      worksSection.innerHTML += '<div class="grid-container flex-item-projects">'
+      + `<div class="grid-item-1 project-image-container"><img class="project-image" src="${projects[i].imgUrl}"></div>`
+      + '<div class="grid-item-2">'
+      + '<div class="flex-container flex-column-center-axis works-title font-family">'
+      + '<div class="flex-item-1 flex-container flex-column-center-axis">'
+      + `<h3 class="card-font card-Title font-family">${projects[i].name}</h3>`
+      + '</div>'
+      + '<div class="flex-item-2 flex-container techs-items-font font-family">'
+      + `${techsHTML}`
+      + '</div>'
+      + '<div class="flex-item-1 flex-container flex-column-center-axis">'
+      + '<a href="#" class="bttn font-family popup" id="0">See Project</a>'
+      + '</div>'
+      + '</div>'
+      + '</div>';
     }
   }
 }
@@ -142,3 +152,21 @@ function addEventListenerList() {
   }
 }
 addEventListenerList();
+
+/*
+
+<div class="grid-item-1 project-image-container"></div>
+<div class="grid-item-2">
+  <div class="flex-container flex-column-center-axis works-title font-family">
+    <div class="flex-item-1 flex-container flex-column-center-axis">
+      <h3 class="card-font card-Title font-family"></h3>
+    </div>
+    <div class="flex-item-2 flex-container techs-items-font font-family">
+    </div>
+    <div class="flex-item-1 flex-container flex-column-center-axis">
+      <a href="#" class="bttn font-family popup" id="0">See Project</a>
+    </div>
+  </div>
+</div>
+
+*/
