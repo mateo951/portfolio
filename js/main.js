@@ -215,7 +215,7 @@ function localStorageAv() {
 }
 
 const storageAvailability = localStorageAv();
-let inputArr = new []();
+let inputArr = [];
 
 function SetInputsArray() {
   const inputName = form.elements.client_name.value;
