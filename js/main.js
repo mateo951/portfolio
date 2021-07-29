@@ -235,3 +235,16 @@ function CheckInput() {
     HandleInputData();
   }
 }
+
+function CheckLocalInput() {
+  var inputs = document.querySelectorAll("#clientInfo .input-layout");
+  var savedData = JSON.parse(localStorage.getItem("formInput"));
+  if (savedData !== null) {
+    for (i = 0; i < inputs.length; i++) {
+      if (hasValue(savedData[i])) {
+        inputs[i].value = savedData[i]
+      }
+    }
+  }
+}
+CheckLocalInput();
