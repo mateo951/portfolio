@@ -87,20 +87,20 @@ function createProjectsSeciton() {
         techsHTML += `<p class="techs-items-basic techs-items-1">${projects[i].techs[j]}</p>`;
       }
       worksSection.innerHTML += '<div class="grid-container flex-item-projects">'
-      + `<div class="grid-item-1 project-image-container"><img class="project-image" src="${projects[i].imgUrl}"></div>`
-      + '<div class="grid-item-2">'
-      + '<div class="flex-container flex-column-center-axis works-title font-family">'
-      + '<div class="flex-item-1 flex-container flex-column-center-axis">'
-      + `<h3 class="card-font card-Title font-family">${projects[i].name}</h3>`
-      + '</div>'
-      + '<div class="flex-item-2 flex-container techs-items-font font-family">'
-      + `${techsHTML}`
-      + '</div>'
-      + '<div class="flex-item-1 flex-container flex-column-center-axis">'
-      + '<a href="#" class="bttn font-family popup" id="0">See Project</a>'
-      + '</div>'
-      + '</div>'
-      + '</div>';
+        + `<div class="grid-item-1 project-image-container"><img class="project-image" src="${projects[i].imgUrl}"></div>`
+        + '<div class="grid-item-2">'
+        + '<div class="flex-container flex-column-center-axis works-title font-family">'
+        + '<div class="flex-item-1 flex-container flex-column-center-axis">'
+        + `<h3 class="card-font card-Title font-family">${projects[i].name}</h3>`
+        + '</div>'
+        + '<div class="flex-item-2 flex-container techs-items-font font-family">'
+        + `${techsHTML}`
+        + '</div>'
+        + '<div class="flex-item-1 flex-container flex-column-center-axis">'
+        + '<a href="#" class="bttn font-family popup" id="0">See Project</a>'
+        + '</div>'
+        + '</div>'
+        + '</div>';
     }
   }
 }
@@ -129,8 +129,7 @@ function addEventListenerList() {
         + '<img id="cancel-detail" src="./images/buttons/cancel-detail-2.png"></div>'
         + '<div class="popup-content">'
         + `<h2 class="popup-title font-family font-color">${projects[projectID].name}</h2>`
-        + `<ul class="popup-text font-family">${
-          techsHTMLDetail
+        + `<ul class="popup-text font-family">${techsHTMLDetail
         }</ul>`
         + `<p class="font-family popup-text">${projects[projectID].description} Lorem Ipsum is simply dummy text of the printing`
         + 'and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown'
@@ -158,7 +157,7 @@ const form = document.getElementById('clientInfo');
 const emailFormat = 'Please enter a valid email adress';
 
 function hasValue(input) {
-  if (input.value === '') {
+  if (input === '') {
     return false;
   }
   return true;
@@ -171,7 +170,6 @@ function showMessage(input, message) {
 
 function validateEmail(input, emailFormat) {
   const email = input.value.trim();
-  // check if the input is not empty
   if (!hasValue(input.value)) {
     return false;
   }
@@ -194,7 +192,6 @@ function hideErrorMessages() {
 }
 
 form.addEventListener('submit', (event) => {
-  // Lower case email
   const email = form.elements.client_email;
   const emailValid = validateEmail(email, emailFormat);
 
@@ -204,3 +201,50 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
   }
 });
+
+// Storage
+function localStorageAv() {
+  const test = 'test';
+  try {
+    localStorage.setItem(test, test);
+    localStorage.removeItem(test);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+const storageAvailability = localStorageAv();
+let inputArr = [];
+
+function SetInputsArray() {
+  const inputName = form.elements.client_name.value;
+  const inputEmail = form.elements.client_email.value;
+  const inputMessage = form.elements.client_message.value;
+  inputArr = [inputName, inputEmail, inputMessage];
+}
+
+function HandleInputData() {
+  SetInputsArray();
+  const jsonData = JSON.stringify(inputArr);
+  localStorage.setItem('formInput', jsonData);
+}
+
+const CheckInput = () => { // eslint-disable-line no-unused-vars
+  if (storageAvailability) {
+    HandleInputData();
+  }
+};
+
+function CheckLocalInput() {
+  const inputs = document.querySelectorAll('#clientInfo .input-layout');
+  const savedData = JSON.parse(localStorage.getItem('formInput'));
+  if (savedData !== null) {
+    for (let i = 0; i < inputs.length; i += 1) {
+      if (hasValue(savedData[i])) {
+        inputs[i].value = savedData[i];
+      }
+    }
+  }
+}
+CheckLocalInput();
