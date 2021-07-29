@@ -203,11 +203,8 @@ form.addEventListener('submit', (event) => {
 });
 
 // Storage
-const storageAvailability = localStorageAv();
-let inputArr = new Array()
-
 function localStorageAv() {
-  var test = 'test';
+  const test = 'test';
   try {
     localStorage.setItem(test, test);
     localStorage.removeItem(test);
@@ -217,32 +214,35 @@ function localStorageAv() {
   }
 }
 
+const storageAvailability = localStorageAv();
+let inputArr = new []();
+
 function SetInputsArray() {
-  let inputName = form.elements.client_name.value;
-  let inputEmail = form.elements.client_email.value;
-  let inputMessage = form.elements.client_message.value;
+  const inputName = form.elements.client_name.value;
+  const inputEmail = form.elements.client_email.value;
+  const inputMessage = form.elements.client_message.value;
   inputArr = [inputName, inputEmail, inputMessage];
 }
 
 function HandleInputData() {
   SetInputsArray();
-  let jsonData = JSON.stringify(inputArr);
+  const jsonData = JSON.stringify(inputArr);
   localStorage.setItem('formInput', jsonData);
 }
 
-function CheckInput() {
+const CheckInput = () => { // eslint-disable-line no-unused-vars
   if (storageAvailability) {
     HandleInputData();
   }
-}
+};
 
 function CheckLocalInput() {
-  var inputs = document.querySelectorAll("#clientInfo .input-layout");
-  var savedData = JSON.parse(localStorage.getItem("formInput"));
+  const inputs = document.querySelectorAll('#clientInfo .input-layout');
+  const savedData = JSON.parse(localStorage.getItem('formInput'));
   if (savedData !== null) {
-    for (i = 0; i < inputs.length; i++) {
+    for (let i = 0; i < inputs.length; i += 1) {
       if (hasValue(savedData[i])) {
-        inputs[i].value = savedData[i]
+        inputs[i].value = savedData[i];
       }
     }
   }
