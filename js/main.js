@@ -79,8 +79,9 @@ const projects = [
 
 // Projects Creation
 function createProjectsSeciton() {
-  if (projects.length !== 0) {
+  if (projects.length > 0) {
     const worksSection = document.querySelector('.worksSection');
+    let idIteration = 0;
     for (let i = 0; i < projects.length; i += 1) {
       let techsHTML = '';
       for (let j = 0; j < projects[i].techs.length; j += 1) {
@@ -97,10 +98,11 @@ function createProjectsSeciton() {
         + `${techsHTML}`
         + '</div>'
         + '<div class="flex-item-1 flex-container flex-column-center-axis">'
-        + '<a href="#" class="bttn font-family popup" id="0">See Project</a>'
+        + `<a href="#" class="bttn font-family popup" id="${idIteration}">See Project</a>`
         + '</div>'
         + '</div>'
         + '</div>';
+      idIteration++;
     }
   }
 }
@@ -114,6 +116,7 @@ function addEventListenerList() {
   for (let i = 0; i < projectBttns.length; i += 1) {
     projectBttns[i].addEventListener('click', (event) => {
       const projectID = event.target.id;
+      console.log(projectID);
       grayBgDiv.id = 'overlay-popup-projects';
       grayBgDiv.classList.add('overlay');
       projectDiv.id = 'overlay-popup';
