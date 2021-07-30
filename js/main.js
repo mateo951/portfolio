@@ -98,7 +98,7 @@ function createProjectsSeciton() {
         + `${techsHTML}`
         + '</div>'
         + '<div class="flex-item-1 flex-container flex-column-center-axis">'
-        + `<a href="#" class="bttn font-family popup" id="${idIteration}">See Project</a>`
+        + `<a href="#" class="bttn font-family popup" id="0">See Project</a>`
         + '</div>'
         + '</div>'
         + '</div>';
