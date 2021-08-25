@@ -40,10 +40,13 @@ hamBttn.addEventListener('click', () => {
 // Projects Data
 const projects = [
   {
-    name: 'The One',
-    imgUrl: './images/projects/project-detail-img.png',
-    techs: ['Codekit', 'Terminal', 'Codepen'],
-    description: 'The One and only',
+    name: 'Frontend Replica',
+    imgUrl: './images/projects/FrontEnd.png',
+    techs: ['JS', 'Flexbox'],
+    description: 'Estructural replica of a design made by Cindy Shin.'
+    + 'Microverse first capstone project as a student. The goal of the project is to apply the '
+    + 'tools we have learned in the last 4 weeks. Being able to show mastery in all topics is crucial!'
+    + ' This webiste reflects how efficient we use html, css and js concepts by cloning a design. ',
   },
   {
     name: 'The Second',
@@ -82,6 +85,7 @@ function createProjectsSeciton() {
   if (projects.length > 0) {
     const worksSection = document.querySelector('.worksSection');
     let idIteration = 0;
+
     for (let i = 0; i < projects.length; i += 1) {
       let techsHTML = '';
       for (let j = 0; j < projects[i].techs.length; j += 1) {
@@ -102,7 +106,7 @@ function createProjectsSeciton() {
         + '</div>'
         + '</div>'
         + '</div>';
-      idIteration++;
+      idIteration += 1;
     }
   }
 }
@@ -116,7 +120,6 @@ function addEventListenerList() {
   for (let i = 0; i < projectBttns.length; i += 1) {
     projectBttns[i].addEventListener('click', (event) => {
       const projectID = event.target.id;
-      console.log(projectID);
       grayBgDiv.id = 'overlay-popup-projects';
       grayBgDiv.classList.add('overlay');
       projectDiv.id = 'overlay-popup';
@@ -132,15 +135,10 @@ function addEventListenerList() {
         + '<img id="cancel-detail" src="./images/buttons/cancel-detail-2.png"></div>'
         + '<div class="popup-content">'
         + `<h2 class="popup-title font-family font-color">${projects[projectID].name}</h2>`
-        + `<ul class="popup-text font-family">${techsHTMLDetail
-        }</ul>`
-        + `<p class="font-family popup-text">${projects[projectID].description} Lorem Ipsum is simply dummy text of the printing`
-        + 'and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown'
-        + 'printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and'
-        + 'typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer'
-        + 'took a galley of type and scrambled it 1960s with the relea</p>'
-        + '<div class="bttn-popup-container"><a href="#" class="bttn-popup font-family">See Source</a>'
-        + '<a href="#" class="bttn-popup font-family">See Live</a></div>'
+        + `<ul class="popup-text font-family">${techsHTMLDetail}</ul>`
+        + `<p class="font-family popup-text">${projects[projectID].description}</p>`
+        + '<div class="bttn-popup-container"><a href="https://github.com/mateo951/capstone_m1" class="bttn-popup font-family">See Source</a>'
+        + '<a href="https://mateo951.github.io/capstone_m1/" class="bttn-popup font-family">See Live</a></div>'
         + '</div>';
       grayBgDiv.appendChild(projectDiv);
       document.body.appendChild(grayBgDiv);
